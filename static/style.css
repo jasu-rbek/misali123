@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+    color: #0f172a;
+    min-height: 100vh;
+}
+
+.navbar {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 18px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.15);
+}
+
+.navbar h1 {
+    font-size: 22px;
+    letter-spacing: 0.4px;
+}
+
+.admin-link {
+    background: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.admin-link:hover {
+    background: #7dd3fc;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 36px auto;
+    padding: 0 20px;
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 24px;
+}
+
+.phone-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.phone-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
+}
+
+.img-box {
+    background: #f8fafc;
+    border-radius: 12px;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    margin-bottom: 14px;
+}
+
+.img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.phone-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.phone-price {
+    font-size: 17px;
+    font-weight: 700;
+    color: #16a34a;
+    background: #dcfce7;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-form input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.order-form input:focus {
+    border-color: #2563eb;
+}
+
+.order-form button {
+    width: 100%;
+    padding: 11px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.order-form button:hover {
+    background: #1d4ed8;
+}

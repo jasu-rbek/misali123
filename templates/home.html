@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="kaa">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Telefon Bazar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>📱 Telefon Bazar</h1>
+        <a class="admin-link" href="/admin">Admin Panel</a>
+    </nav>
+
+    <main class="container">
+        <div class="catalog">
+            {% for phone in phones %}
+            <div class="phone-card">
+                <div>
+                    <div class="img-box">
+                        <img src="{{ phone['image_url'] }}" alt="{{ phone['brand'] }} {{ phone['name'] }}">
+                    </div>
+                    <h3 class="phone-title">{{ phone['brand'] }} {{ phone['name'] }}</h3>
+                    <p class="phone-price">
+                        Bahası: {{ "{:,}".format(phone['price']).replace(",", " ") }} sum
+                    </p>
+                </div>
+
+                <form class="order-form" action="/order/{{ phone['id'] }}" method="POST">
+                    <input type="text" name="customer_name" placeholder="Atıńız" required>
+                    <input type="text" name="customer_phone" placeholder="+998 90 123 45 67" required>
+                    <button type="submit">Buyırtpa beriw</button>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+
+</html>
