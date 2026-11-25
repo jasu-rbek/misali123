@@ -4,7 +4,8 @@ from flask import Flask, render_template, request, redirect, url_for
 from dotenv import load_dotenv
 app = Flask(__name__)
 load_dotenv()
-BOT_TOKEN = "API"
+import os
+BOT_TOKEN = os.getenv("API")
 CHAT_ID = "8976515963"
 
 SAMPLE_PHONES = [
